@@ -4,38 +4,7 @@
     box-sizing: border-box;
 }
 
-.grid-container{
-     width: 80%;
-     margin: 0 auto;
-     color: orchid;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 250px 100px auto;
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "footer footer footer"
-    ;
-}
-.encabezado{
-    background-color: orange;
-    grid-area: header;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-}
 
-.contenido{
-     background-color: beige;
-     grid-area: main;
-}
-
-.pie{
-    background-color: antiquewhite;
-    grid-area: footer;
-}
 
 
 html {
@@ -44,6 +13,8 @@ html {
 
 body{
     background-image: linear-gradient(to left, red, yellow);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 nav {
@@ -57,9 +28,9 @@ nav {
     justify-content: space-between;
 
 }
-
+ 
 .logo {
-    width: 150px;
+    width: 90px;
     height: 90%;
     border-radius: 10px;
     padding: 0px;
@@ -68,34 +39,6 @@ nav {
     
 }
 
-.listaNavegacion {
-    font-size: x-large;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
-
-.listaNavegacion a {
-    color: rgb(245, 57, 10);
-    text-decoration: none;
-    padding: 10px;
-    margin-right: 50px;
-}
-
-.listaNavegacion a:hover {
-    color: rgb(72, 70, 70);
-    background-color: rgb(223, 209, 209);
-    border-radius: 10px;
-}
-
-ul{
-    list-style-type:none ;
-}
-
-.lista-navegacion li{
-    display: inline;
-}
 
 .imagen-header{
     width: 200px;
@@ -131,15 +74,15 @@ margin-left: 50px;
 }
 
 .sectionIndex .img1{
-    padding-left: 500px;
+    padding-left: 40px;
 }
 .sectionIndex .img2{
     padding-top: 50px;
-    padding-left: 700px;
+    padding-left: 80px;
 }
 .sectionIndex .img3{
     padding-top: 50px;
-    padding-left: 900px;
+    padding-left: 120px;
 }
 
 .divnosotros{
@@ -209,3 +152,43 @@ color: white;
 .imgimpuestos {
 transform: rotateY('350');
 }
+
+
+.navbarfondo{
+    background-color: yellow;
+}
+
+
+  .container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 10px 10px; 
+    grid-template-areas: 
+      "img1 . ."
+      ". img2 ."
+      ". . img3"; 
+  }
+  .img1 { grid-area: img1; }
+  .img2 { grid-area: img2; }
+  .img3 { grid-area: img3; }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 10px;
+      grid-template-areas:
+   "img1"
+   "img2"
+   "img3"; } }
+
+   .quienessomos p:hover{
+opacity: 90%;
+color:black
+   }
+
+   .nuestraformacion p:hover{
+    opacity: 90%;
+    color:black
+       }
