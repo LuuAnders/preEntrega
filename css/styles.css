@@ -149,15 +149,6 @@ color: white;
 
 /*Acá empieza el código de las transformaciones*/
 
-.imgimpuestos {
-transform: rotateY('350');
-}
-
-
-.navbarfondo{
-    background-color: yellow;
-}
-
 
   .container {
     display: grid; 
